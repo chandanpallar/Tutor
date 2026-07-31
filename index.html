@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EliteTutoring | Premium Private Education &amp; Home Tuition</title>
+<meta content="EliteTutoring offers personalized home and online tuition for school students, focusing on individual attention and academic excellence." name="description"/>
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Local SEO Schema -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationService",
+      "name": "EliteTutoring",
+      "description": "Premium private home and online tuition services for school students.",
+      "url": "https://elitetutoring.com",
+      "telephone": "+1234567890",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "UK"
+      },
+      "serviceType": "Private Tutoring",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "EliteTutoring"
+      }
+    }
+    </script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-bright": "#f8f9ff",
+                "on-secondary": "#ffffff",
+                "on-surface": "#0b1c30",
+                "background": "#f8f9ff",
+                "on-secondary-fixed-variant": "#052fc8",
+                "tertiary-container": "#434b56",
+                "surface": "#f8f9ff",
+                "on-primary-fixed": "#001c37",
+                "surface-container-highest": "#d3e4fe",
+                "surface-container-lowest": "#ffffff",
+                "outline-variant": "#c2c7d1",
+                "primary-fixed-dim": "#a0c9ff",
+                "outline": "#727780",
+                "on-primary-container": "#8ebdf9",
+                "surface-tint": "#2d6197",
+                "on-primary": "#ffffff",
+                "on-primary-fixed-variant": "#07497d",
+                "secondary-fixed-dim": "#bac3ff",
+                "secondary": "#2d4add",
+                "surface-container-high": "#dce9ff",
+                "surface-container-low": "#eff4ff",
+                "on-error": "#ffffff",
+                "on-background": "#0b1c30",
+                "on-surface-variant": "#42474f",
+                "primary": "#00355f",
+                "on-secondary-fixed": "#000f5c",
+                "primary-container": "#0f4c81",
+                "primary-fixed": "#d2e4ff",
+                "surface-container": "#e5eeff",
+                "on-tertiary-fixed-variant": "#3f4752",
+                "on-tertiary-fixed": "#141c26",
+                "inverse-on-surface": "#eaf1ff",
+                "error": "#ba1a1a",
+                "on-error-container": "#93000a",
+                "surface-dim": "#cbdbf5",
+                "tertiary": "#2c343f",
+                "secondary-container": "#4b65f7",
+                "on-tertiary-container": "#b3bbc8",
+                "inverse-surface": "#213145",
+                "tertiary-fixed": "#dbe3f1",
+                "error-container": "#ffdad6",
+                "secondary-fixed": "#dee0ff",
+                "on-secondary-container": "#fffbff",
+                "surface-variant": "#d3e4fe",
+                "tertiary-fixed-dim": "#bfc7d4",
+                "inverse-primary": "#a0c9ff",
+                "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "xs": "4px",
+                "container-max": "1200px",
+                "xl": "40px",
+                "gutter": "24px",
+                "lg": "24px",
+                "md": "16px",
+                "sm": "8px",
+                "2xl": "64px",
+                "base": "4px"
+            },
+            "fontFamily": {
+                "title-lg": ["Inter"],
+                "display-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-md-mobile": ["Inter"],
+                "body-lg": ["Inter"],
+                "label-md": ["Inter"],
+                "caption": ["Inter"],
+                "headline-md": ["Inter"],
+                "display-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-md-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-glass {
+            backdrop-filter: blur(8px);
+            background-color: rgba(248, 249, 255, 0.85);
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md selection:bg-primary-fixed-dim">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 shadow-sm nav-glass">
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto w-full">
+<div class="font-title-lg text-title-lg font-bold text-primary">EliteTutoring</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-secondary font-semibold border-b-2 border-secondary transition-all duration-200 ease-in-out" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#subjects">Subjects</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#why-me">Why Me</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#contact">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md hover:bg-primary-container transition-all duration-200 active:scale-95 shadow-sm">
+                Book Free Demo
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-2xl pb-2xl md:pt-32 md:pb-40 px-md" id="home">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="fade-in z-10">
+<span class="inline-block px-md py-xs bg-surface-container-high text-primary rounded-full font-label-md mb-md">
+                        #1 Rated Private Tuition
+                    </span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-md tracking-tight">
+                        Personalized Home &amp; <span class="text-secondary">Online Tuition</span> for School Students
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-xl">
+                        Building a strong academic foundation through tailored mentorship. We don't just teach; we inspire students to achieve their highest potential with customized learning paths.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md">
+<button class="bg-primary text-on-primary px-xl py-md rounded-lg font-title-lg hover:bg-primary-container transition-all duration-300 shadow-md flex items-center justify-center gap-sm">
+                            Book Free Demo Class
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary px-xl py-md rounded-lg font-title-lg hover:bg-surface-container-low transition-all duration-300 flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined">call</span>
+                            Call Now
+                        </button>
+</div>
+</div>
+<div class="relative fade-in">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-surface-container-highest rounded-full blur-3xl opacity-50 -z-10"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary-fixed-dim rounded-full blur-3xl opacity-30 -z-10"></div>
+<div class="rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 bg-white p-2">
+<img class="w-full h-[500px] object-cover rounded-xl" data-alt="A bright, high-resolution lifestyle photograph of a professional female tutor and a teenage student sitting at a clean, white modern desk. They are looking at a tablet together in a sun-drenched home study environment with books and a laptop nearby. The lighting is soft and warm, emphasizing a supportive and premium educational atmosphere. The color palette features whites, soft blues, and natural wood tones, reflecting a clean and modern academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6oe2Sl4elxhduhM9JKhinx3msVcTUvELNDcQPpg7QaTCkRyIT3zuBcjGbjCiIu2fMqFafICGFypSF2Go9tbeEVMIK2uLIBjLiV60MCFo6R0vtP-VRQGcK90kSkFjC_eFbaY_WKq1vDS5HXxGzJIK49C0k79crIwGsWieq3opbfB2HklkNFsxu80Kd9IxVDK0GLAwNS0xnYC4ulRri8Mz9adIBCu6OQLYYHaN94W5FVvBoo_RhxeTApg"/>
+</div>
+<!-- Achievement Badge -->
+<div class="absolute bottom-6 -left-6 bg-white p-lg rounded-xl shadow-lg border border-outline-variant hidden md:block">
+<div class="flex items-center gap-md">
+<div class="bg-secondary-container p-sm rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<div class="font-title-lg text-title-lg text-primary">500+</div>
+<div class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Students Guided</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlight Cards (Bento Grid) -->
+<section class="py-2xl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-md">
+<div class="text-center mb-2xl fade-in">
+<h2 class="font-headline-md-mobile md:font-headline-md md:text-headline-md text-primary mb-sm">Why Choose EliteTutoring?</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">We provide a premium learning experience designed to eliminate academic stress and foster genuine curiosity.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<!-- Card 1 -->
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-lg transition-all duration-300 group fade-in">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-primary mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">person</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-sm">Individual Attention</h3>
+<p class="text-on-surface-variant font-body-md">1-on-1 sessions tailored specifically to the student's pace and learning style for maximum impact.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-lg transition-all duration-300 group fade-in">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-primary mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">psychology_alt</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-sm">Doubt Solving</h3>
+<p class="text-on-surface-variant font-body-md">Instant clarification of complex concepts. We ensure no student is left behind with unanswered questions.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-lg transition-all duration-300 group fade-in">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-primary mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">assignment_turned_in</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-sm">Regular Tests</h3>
+<p class="text-on-surface-variant font-body-md">Bi-weekly assessments to track progress, identify weak areas, and build exam-taking confidence.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-lg transition-all duration-300 group fade-in">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-primary mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-sm">Flexible Timings</h3>
+<p class="text-on-surface-variant font-body-md">Scheduling that fits your busy life. Online or home visits at hours that work best for your family.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Subjects Grid -->
+<section class="py-2xl px-md" id="subjects">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-2xl fade-in">
+<div class="max-w-xl">
+<h2 class="font-headline-md md:text-headline-md text-primary mb-sm">Subjects We Excel In</h2>
+<p class="text-on-surface-variant">Expert tutoring across multiple disciplines for primary, middle, and high school students.</p>
+</div>
+<a class="text-secondary font-label-md flex items-center gap-xs hover:underline mt-md md:mt-0" href="#">View All Subjects <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-md fade-in">
+<div class="bg-white border border-outline-variant rounded-xl p-md text-center hover:border-secondary transition-colors group cursor-pointer">
+<div class="bg-surface-container-low w-12 h-12 rounded-full mx-auto mb-md flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">calculate</span>
+</div>
+<span class="font-label-md text-primary">Mathematics</span>
+</div>
+<div class="bg-white border border-outline-variant rounded-xl p-md text-center hover:border-secondary transition-colors group cursor-pointer">
+<div class="bg-surface-container-low w-12 h-12 rounded-full mx-auto mb-md flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">science</span>
+</div>
+<span class="font-label-md text-primary">Physics</span>
+</div>
+<div class="bg-white border border-outline-variant rounded-xl p-md text-center hover:border-secondary transition-colors group cursor-pointer">
+<div class="bg-surface-container-low w-12 h-12 rounded-full mx-auto mb-md flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">biotech</span>
+</div>
+<span class="font-label-md text-primary">Biology</span>
+</div>
+<div class="bg-white border border-outline-variant rounded-xl p-md text-center hover:border-secondary transition-colors group cursor-pointer">
+<div class="bg-surface-container-low w-12 h-12 rounded-full mx-auto mb-md flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<span class="font-label-md text-primary">English Literature</span>
+</div>
+<div class="bg-white border border-outline-variant rounded-xl p-md text-center hover:border-secondary transition-colors group cursor-pointer">
+<div class="bg-surface-container-low w-12 h-12 rounded-full mx-auto mb-md flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<span class="font-label-md text-primary">History</span>
+</div>
+<div class="bg-white border border-outline-variant rounded-xl p-md text-center hover:border-secondary transition-colors group cursor-pointer">
+<div class="bg-surface-container-low w-12 h-12 rounded-full mx-auto mb-md flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">public</span>
+</div>
+<span class="font-label-md text-primary">Geography</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Registration -->
+<section class="py-2xl px-md bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto text-center fade-in">
+<h2 class="font-headline-md md:text-headline-md mb-md">Ready to start the journey to excellence?</h2>
+<p class="font-body-lg text-primary-fixed mb-xl max-w-xl mx-auto opacity-90">Join 500+ successful students who have transformed their grades with EliteTutoring's personalized approach.</p>
+<div class="flex flex-wrap justify-center gap-md">
+<button class="bg-secondary-container text-on-secondary-container px-xl py-md rounded-lg font-title-lg hover:shadow-lg hover:scale-105 transition-all">Book Your Free Trial</button>
+<button class="bg-transparent border border-on-primary text-on-primary px-xl py-md rounded-lg font-title-lg hover:bg-white/10 transition-all">Talk to an Expert</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-lg py-2xl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-title-lg text-title-lg text-primary mb-md">EliteTutoring</div>
+<p class="text-on-surface-variant font-caption">Premier educational mentoring for a brighter tomorrow. Expert tutors, personalized attention, guaranteed growth.</p>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-md uppercase tracking-widest">Quick Links</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant font-caption hover:underline transition-all" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant font-caption hover:underline transition-all" href="#">Our Subjects</a></li>
+<li><a class="text-on-surface-variant font-caption hover:underline transition-all" href="#">Success Stories</a></li>
+<li><a class="text-on-surface-variant font-caption hover:underline transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-md uppercase tracking-widest">Contact Info</h4>
+<ul class="space-y-sm text-on-surface-variant font-caption">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">mail</span> contact@elitetutoring.com</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">call</span> +1 (234) 567-890</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">location_on</span> 123 Education Hub, Oxford, UK</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-md uppercase tracking-widest">Newsletter</h4>
+<p class="text-on-surface-variant font-caption mb-md">Get educational tips and updates.</p>
+<div class="flex">
+<input class="bg-white border border-outline-variant rounded-l-lg px-md py-sm w-full focus:ring-1 focus:ring-secondary focus:outline-none text-caption" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-md py-sm rounded-r-lg">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-lg px-lg">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="text-on-surface-variant font-caption">© 2024 EliteTutoring. All rights reserved.</div>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant font-caption hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-caption hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-caption hover:underline transition-all" href="#">FAQ</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-md rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center animate-bounce" href="https://wa.me/1234567890" target="_blank">
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+<!-- Fade-in Interaction Script -->
+<script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Sticky Nav subtle opacity change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.style.backgroundColor = 'rgba(248, 249, 255, 0.98)';
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.style.backgroundColor = 'rgba(248, 249, 255, 0.85)';
+            }
+        });
+    </script>
+</body></html>
